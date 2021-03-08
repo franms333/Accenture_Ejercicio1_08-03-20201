@@ -303,6 +303,7 @@ function salirDelSistema(){
         document.getElementById('input').style.display = 'none'
         document.getElementById('aprobados').innerHTML='';
         document.getElementById('div-student-form').style.display='block';
+        document.getElementById('div-subjects-form').style.display = 'none'
         document.getElementById('menu').style.display='none';
         
     }
@@ -397,12 +398,21 @@ function validateLegajo(){
 
 function validateNombre(){
     const nombre = document.getElementById('nombre');
-    const re = /^[A-Za-z]{2,10}$/;
-    if(!re.test(nombre.value)){
-        nombre.classList.add('is-invalid');
-    }else{
-        nombre.classList.remove('is-invalid');
-    }
+    fetch('alumnos.json').then(response => response.json())
+    .then(data => {
+    console.log(data);
+    const alumno = data.find(alumno => alumno.nombre === nombre.value);
+    if(!alumno){
+        alert('El alumno no existe');
+    } else{
+        const re = /^[A-Za-z]{2,10}$/;
+        if(!re.test(nombre.value) || nombre.value===''){
+            nombre.classList.add('is-invalid');
+        }else{
+            nombre.classList.remove('is-invalid');
+        }
+    } 
+})
 }
 function validateDNI(){
     const dni = document.getElementById('dni');
