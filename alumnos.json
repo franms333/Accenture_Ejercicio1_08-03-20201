@@ -1,0 +1,29 @@
+[
+    {
+        "nombre": "Francisco",
+        "dni": 95863112,
+        "mail": "fmontes@gmail.com",
+        "telefono": "1144445555",
+        "curso": "Nocturno",
+        "legajo": "AN958631122021"
+        
+    },
+    {
+        "nombre": "Jennifer",
+        "dni": 95444888,
+        "mail": "jmontes@gmail.com",
+        "telefono": "1144447777",
+        "curso": "Diurno",
+        "legajo": "AD954448882021"
+        
+    },
+    {
+        "nombre": "Luis",
+        "dni": 95555999,
+        "mail": "lacurero@gmail.com",
+        "telefono": "1144448888",
+        "curso": "Tarde",
+        "legajo": "AT955559992021"
+        
+    }
+]

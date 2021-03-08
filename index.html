@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Ejercicios 08-03-2021</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center pt-5" id="menu">
+                        <button id="b1" class="btn btn-secondary">listar Usuarios</button>
+                        <button id="b2" class="btn btn-secondary">Buscar Usuario</button>
+                        <button id="b3" class="btn btn-secondary">Salir del Sistema</button>
+            </div>
+            <div class="col-md-6 mx-auto text-center pt-5" id="busquedaUsuario">
+                <h3>¿Por cuál dato desea buscar?</h3>
+                        <button id="buscarDNI" class="btn btn-secondary">DNI</button>
+                        <button id="buscarNombre" class="btn btn-secondary">Nombre</button>
+                        <button id="buscarCelular" class="btn btn-secondary">Celular</button>
+                        <button id="buscarEmail" class="btn btn-secondary">E-mail</button>
+            </div>
+            <div id="input" class="col-md-6 mx-auto text-center pt-5">
+                <h4>Favor ingrese el valor del dato seleccionado</h4>
+                <input type="text" id="valorBusqueda">
+                <button id="buscar" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+        <!-- FORMULARIO DE INGRESO DE DATOS DE LAS MATERIAS -->
+        <div class="row">
+            <div class="col-md-6 mx-auto" id="div-student-form">
+                <div id="form" class="pt-5">
+                <h1>Hola alumno, bienvenido!</h1>
+                <p>Por favor, ingrese los siguientes datos</p>
+                    <form>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Nombre</label>
+                            <input type="text" value="Jennifer" class="form-control" id="nombre" placeholder="Nombre">
+                            <div class="invalid-feedback">
+                                El nombre debe tener entre 2 y 30 caracteres
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Email</label>
+                            <input type="text" value="jmontes@gmail.com" class="form-control" id="email" placeholder="Email">
+                            <div class="invalid-feedback">
+                                Debe ingresar un email válido
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Telefono</label>
+                            <input type="text" value="1144447777" class="form-control" id="telefono" placeholder="Teléfono">
+                            <div class="invalid-feedback">
+                                El telefono no puede superar los 10 caracteres
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>DNI</label>
+                            <input type="text" value="95444888" class="form-control" id="dni" placeholder="DNI">
+                            <div class="invalid-feedback">
+                                Ingrese un DNI válido
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Curso</label>
+                            <input type="text" value="" class="form-control" id="curso" placeholder="Diurno/Tarte/Nocturno">
+                            <div class="invalid-feedback">
+                                El alumno no pertenece al curso indicado
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Legajo</label>
+                            <input type="text" value="AD954448882021" class="form-control" id="legajo" placeholder="Legajo">
+                            <div class="invalid-feedback">
+                                El DNI no coincide con el legajo
+                            </div>
+                        </div>
+                        <div class="form-group pt-2 pb-2">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" placeholder="Fecha de Nacimiento">
+                            <div class="invalid-feedback">
+                               Es necesario tener más de 18 años
+                            </div>
+                        </div>
+                        <button id="button" class="btn btn-primary mt-2 col-12 mb-5">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    
+                    <!-- FORMULARIO DE INGRESO DE DATOS DE LAS MATERIAS -->
+                    <div class="row" >
+                        <div class="col-md-6 mx-auto" id="div-subjects-form">
+                            <div id="form" class="pt-5">
+                            <h1>Hola!</h1>
+                            <p>Por favor, ingrese los siguientes datos sobre las materias</p>
+                                <form>
+                                    <div class="form-group pt-2 pb-2" id="div-quimica">
+                                        <label>Química</label>
+                                        <input type="text" value="" class="form-control" id="quimica" placeholder="Ingrese sus notas de química divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-matematica">
+                                        <label>Matemática</label>
+                                        <input type="text" value="" class="form-control" id="matematica" placeholder="Ingrese sus notas de matemática divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-ciencias-sociales">
+                                        <label>Ciencias Sociales</label>
+                                        <input type="text" value="" class="form-control" id="ciencias-sociales" placeholder="Ingrese sus notas de Cs.Sociales divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-fisica">
+                                        <label>Física</label>
+                                        <input type="text" value="" class="form-control" id="fisica" placeholder="Ingrese sus notas de física divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-historia">
+                                        <label>Historia</label>
+                                        <input type="text" value="" class="form-control" id="historia" placeholder="Ingrese sus notas de historia divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-biologia">
+                                        <label>Biología</label>
+                                        <input type="text" value="" class="form-control" id="biologia" placeholder="Ingrese sus notas de biología divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-informatica">
+                                        <label>Informática</label>
+                                        <input type="text" value="" class="form-control" id="informatica" placeholder="Ingrese sus notas de informática divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <div class="form-group pt-2 pb-2" id="div-idiomas">
+                                        <label>Idiomas</label>
+                                        <input type="text" value="" class="form-control" id="idiomas" placeholder="Ingrese sus notas de idiomas divididas por ',' (ejemplo: 10,7,8)">
+                    
+                                    </div>
+                                    <button id="button2" class="btn btn-primary mt-2 col-12 mb-5">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="listaUsuarios"></div>
+                        <div id="aprobados"></div>
+                    </div>
+
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
